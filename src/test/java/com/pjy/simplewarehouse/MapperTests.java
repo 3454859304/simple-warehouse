@@ -40,6 +40,10 @@ public class MapperTests {
     void caroTest(){
         List<Cargo> cargos = cargoMapper.selectList(null);
         log.info(String.valueOf(cargos));
+        List<Cargo> cargos1 = cargoMapper.selectByCategory("书籍",null,null);
+        log.info(String.valueOf(cargos1));
+        List<Cargo> cargos2 = cargoMapper.selectByCategory("书籍",0,1);
+        log.info(String.valueOf(cargos2));
     }
     @Test
     void cgjlTest() {
