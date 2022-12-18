@@ -9,5 +9,5 @@ import com.pjy.simplewarehouse.common.api.R;
  * @date: 2022年12月18日 13:48
  */
 public interface InBoundService {
-    R getCglist();
+    R getCglist(Integer pageNum,Integer pqgeSize);
 }
