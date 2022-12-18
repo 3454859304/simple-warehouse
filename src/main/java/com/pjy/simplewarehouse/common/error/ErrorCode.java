@@ -9,7 +9,13 @@ package com.pjy.simplewarehouse.common.error;
 public enum ErrorCode {
     OK("00000","success"),
     ERROR_HAPPEND("00001","未知异常"),
-    LOGIN_ERROR("A0200", "登录失败"),
+    LOGIN_ERROR("A0100", "登录失败"),
+    CARGO_ERROR("A0200", "货物异常"),
+    CARGO_NOTFUND("A0201", "货物不存在"),
+    CARGO_EXISTED("A0202", "已存在该货物"),
+    CG_ERROR("A0300", "采购异常"),
+    RK_ERROR("A0400","入库异常"),
+    CK_ERROR("A0500","出库异常"),
 
     ;
 

@@ -21,14 +21,54 @@
         picture,description
     </sql>
 
+    <insert id="add">
+        insert into cargo
+        (name,manufacture,number,category,house_id,picture,description)
+        values
+        (#{name},#{manufacture},0,#{category},#{houseId},"",#{description})
+    </insert>
+
+    <select id="selectAll" resultType="com.pjy.simplewarehouse.domain.entity.Cargo">
+        select  <include refid="ALL_Column"/>
+        from cargo
+    </select>
+
     <select id="selectByCategory" resultType="com.pjy.simplewarehouse.domain.entity.Cargo">
         select  <include refid="ALL_Column"/>
         from cargo
         <where>
             cargo.category= #{category}
-            <if test="pageNum!=null and pageSize!=null">
-                limit #{pageNum},#{pageSize}
-            </if>
         </where>
     </select>
+    <select id="getCategoryList" resultType="java.lang.String">
+        select distinct category
+        from cargo
+        where cargo.category!=''
+    </select>
+    <select id="search" resultType="com.pjy.simplewarehouse.domain.entity.Cargo">
+        select <include refid="ALL_Column"/>
+        from cargo
+        <where>
+            <if test="name!=null">
+                AND cargo.name=#{name}
+            </if>
+            <if test="houseId!=null">
+                AND cargo.house_id=#{houseId}
+            </if>
+            <if test="category!=null">
+                AND cargo.category=#{category}
+            </if>
+            <if test="manufacture!=null">
+                AND cargo.manufacture=#{manufacture}
+            </if>
+            <if test="numberMin!=null">
+                AND cargo.number &gt;= #{numberMin}
+            </if>
+            <if test="numberMax!=null">
+                AND cargo.number &lt;= #{numberMax}
+            </if>
+        </where>
+
+    </select>
+
 </mapper>

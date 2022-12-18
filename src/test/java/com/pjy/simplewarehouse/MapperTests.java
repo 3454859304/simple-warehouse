@@ -1,5 +1,6 @@
 package com.pjy.simplewarehouse;
 
+
 import com.pjy.simplewarehouse.dao.*;
 import com.pjy.simplewarehouse.domain.entity.*;
 import org.junit.jupiter.api.Test;
@@ -32,7 +33,6 @@ public class MapperTests {
     RkjlMapper rkjlMapper;
     @Test
     void userTest() {
-
         List<User> users = userMapper.selectList(null);
         log.info(String.valueOf(users));
     }
@@ -40,9 +40,9 @@ public class MapperTests {
     void caroTest(){
         List<Cargo> cargos = cargoMapper.selectList(null);
         log.info(String.valueOf(cargos));
-        List<Cargo> cargos1 = cargoMapper.selectByCategory("书籍",null,null);
+        List<Cargo> cargos1 = cargoMapper.selectByCategory("书籍");
         log.info(String.valueOf(cargos1));
-        List<Cargo> cargos2 = cargoMapper.selectByCategory("书籍",0,1);
+        List<Cargo> cargos2 = cargoMapper.selectByCategory("书籍");
         log.info(String.valueOf(cargos2));
     }
     @Test

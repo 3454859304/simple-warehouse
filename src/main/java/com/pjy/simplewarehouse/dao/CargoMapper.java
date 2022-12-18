@@ -2,6 +2,8 @@ package com.pjy.simplewarehouse.dao;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.pjy.simplewarehouse.domain.dto.CargoAddDTO;
+import com.pjy.simplewarehouse.domain.dto.CargoSearchDTO;
 import com.pjy.simplewarehouse.domain.entity.Cargo;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -15,7 +17,16 @@ import java.util.List;
 */
 @Mapper
 public interface CargoMapper extends BaseMapper<Cargo> {
-    public List<Cargo> selectByCategory(String category,Integer pageNum,Integer pageSize);
+
+    List<Cargo> selectAll();
+
+    public List<Cargo> selectByCategory(String category);
+
+    List<String> getCategoryList();
+
+    List<Cargo> search(CargoSearchDTO dto);
+
+    int add(CargoAddDTO dto);
 }
 
 

@@ -6,6 +6,7 @@
 
     <resultMap id="BaseResultMap" type="com.pjy.simplewarehouse.domain.entity.Cgjl">
             <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="end" column="end" jdbcType="INTEGER"/>
             <result property="time" column="time" jdbcType="TIMESTAMP"/>
             <result property="name" column="name" jdbcType="VARCHAR"/>
             <result property="number" column="number" jdbcType="INTEGER"/>
@@ -14,7 +15,16 @@
     </resultMap>
 
     <sql id="Base_Column_List">
-        id,time,name,
-        number,price,group_id
+        id,end,time,
+        name,number,price,
+        group_id
     </sql>
+    <insert id="insertList">
+        insert into cgjl
+        (name,end,number,price,group_id)
+        value
+        <foreach collection ="list" item="dto" separator =",">
+            (#{dto.name}, #{dto.end}, #{dto.number},#{dto.price},#{time})
+        </foreach >
+    </insert>
 </mapper>
