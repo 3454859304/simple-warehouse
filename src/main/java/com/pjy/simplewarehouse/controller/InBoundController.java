@@ -24,6 +24,7 @@ public class InBoundController {
     @GetMapping("/cgjl")
     public R getCgList(){
         return inboundService.getCglist();
+
     }
 
 }
