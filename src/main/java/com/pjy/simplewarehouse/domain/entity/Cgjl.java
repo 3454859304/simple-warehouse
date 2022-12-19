@@ -9,44 +9,44 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * 
+ *
  * @TableName cgjl
  */
 @TableName(value ="cgjl")
 public class Cgjl implements Serializable {
     /**
-     * 
+     *
      */
     @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
-     * 
+     *
      */
     private Integer end;
 
     /**
-     * 
+     *
      */
     private Date time;
 
     /**
-     * 
+     *
      */
     private String name;
 
     /**
-     * 
+     *
      */
     private Integer number;
 
     /**
-     * 
+     *
      */
     private BigDecimal price;
 
     /**
-     * 
+     *
      */
     private Integer groupId;
 
@@ -54,101 +54,103 @@ public class Cgjl implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 
+     *
      */
     public Integer getId() {
         return id;
     }
 
     /**
-     * 
+     *
      */
-    public void setId(Integer id) {
+    public Cgjl setId(Integer id) {
         this.id = id;
+        return this;
     }
 
     /**
-     * 
+     *
      */
     public Integer getEnd() {
         return end;
     }
 
     /**
-     * 
+     *
      */
-    public void setEnd(Integer end) {
-        this.end = end;
+    public Cgjl setEnd(Integer end) {
+        this.end = end;return this;
     }
 
     /**
-     * 
+     *
      */
     public Date getTime() {
         return time;
     }
 
     /**
-     * 
+     *
      */
-    public void setTime(Date time) {
+    public Cgjl setTime(Date time) {
         this.time = time;
+        return this;
     }
 
     /**
-     * 
+     *
      */
     public String getName() {
         return name;
     }
 
     /**
-     * 
+     *
      */
-    public void setName(String name) {
-        this.name = name;
+    public Cgjl setName(String name) {
+        this.name = name;return this;
     }
 
     /**
-     * 
+     *
      */
     public Integer getNumber() {
         return number;
     }
 
     /**
-     * 
+     *
      */
-    public void setNumber(Integer number) {
-        this.number = number;
+    public Cgjl setNumber(Integer number) {
+        this.number = number;return this;
     }
 
     /**
-     * 
+     *
      */
     public BigDecimal getPrice() {
         return price;
     }
 
     /**
-     * 
+     *
      */
-    public void setPrice(BigDecimal price) {
-        this.price = price;
+    public Cgjl setPrice(BigDecimal price) {
+        this.price = price;return this;
     }
 
     /**
-     * 
+     *
      */
     public Integer getGroupId() {
         return groupId;
     }
 
     /**
-     * 
+     *
      */
-    public void setGroupId(Integer groupId) {
-        this.groupId = groupId;
+    public Cgjl setGroupId(Integer groupId) {
+        this.groupId = groupId;return this;
     }
 
     @Override

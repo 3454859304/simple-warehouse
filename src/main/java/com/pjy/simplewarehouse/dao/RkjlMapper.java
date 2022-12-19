@@ -1,8 +1,11 @@
 package com.pjy.simplewarehouse.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.pjy.simplewarehouse.domain.dto.RkjlDTO;
 import com.pjy.simplewarehouse.domain.entity.Rkjl;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
 * @author PJY
@@ -13,6 +16,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface RkjlMapper extends BaseMapper<Rkjl> {
 
+    int insertList(List<RkjlDTO> list, int groupId);
 }
 
 

@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.pjy.simplewarehouse.domain.entity.Ckjl;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.ArrayList;
+
 /**
 * @author PJY
 * @description 针对表【ckjl】的数据库操作Mapper
@@ -13,6 +15,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface CkjlMapper extends BaseMapper<Ckjl> {
 
+    int insertList(ArrayList<Ckjl> list, int groupId);
 }
 
 

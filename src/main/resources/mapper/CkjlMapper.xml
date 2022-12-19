@@ -17,4 +17,12 @@
         id,name,time,
         num,houseid,group_id
     </sql>
+    <insert id="insertList">
+        insert into ckjl
+        (name,num,houseid,group_id)
+        value
+        <foreach collection ="list" item="dto" separator =",">
+            (#{dto.name}, #{dto.num}, #{dto.houseid},#{groupId})
+        </foreach >
+    </insert>
 </mapper>

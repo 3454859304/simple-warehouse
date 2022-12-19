@@ -24,7 +24,7 @@
         (name,end,number,price,group_id)
         value
         <foreach collection ="list" item="dto" separator =",">
-            (#{dto.name}, #{dto.end}, #{dto.number},#{dto.price},#{time})
+            (#{dto.name}, #{dto.end}, #{dto.number},#{dto.price},#{groupId})
         </foreach >
     </insert>
 </mapper>

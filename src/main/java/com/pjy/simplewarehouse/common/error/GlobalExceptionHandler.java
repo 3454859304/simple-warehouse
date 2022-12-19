@@ -31,6 +31,7 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public R ApiExceptionHandler(HttpServletRequest req, ApiException e){
         logger.warn("发生异常:{}",e.getMessage());
+        e.printStackTrace();
         return R.error(e.getErrorCode());
     }
 
@@ -38,6 +39,7 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public R ApiExceptionHandler(HttpServletRequest req, Exception e){
         logger.warn("未知异常:{}",e.getMessage());
+        e.printStackTrace();
         return R.error(ErrorCode.ERROR_HAPPEND);
     }
 

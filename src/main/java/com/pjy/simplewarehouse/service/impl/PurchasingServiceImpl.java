@@ -70,8 +70,8 @@ public class PurchasingServiceImpl implements PurchasingService {
 
     @Override
     public R generate( List<CgjlDTO> list) {
-        int time = (int) System.currentTimeMillis();
-        int i = cgjlMapper.insertList(list, time);
+        int groupId = (int) System.currentTimeMillis();
+        int i = cgjlMapper.insertList(list, groupId);
         if(i==0) throw new ApiException(ErrorCode.CG_ERROR);
         return R.ok();
     }

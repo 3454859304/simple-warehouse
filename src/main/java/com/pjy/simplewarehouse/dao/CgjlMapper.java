@@ -16,7 +16,7 @@ import java.util.List;
 @Mapper
 public interface CgjlMapper extends BaseMapper<Cgjl> {
 
-    int insertList(List<CgjlDTO> list, int time);
+    int insertList(List<CgjlDTO> list, int groupId);
 }
 
 

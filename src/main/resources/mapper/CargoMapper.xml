@@ -28,6 +28,7 @@
         (#{name},#{manufacture},0,#{category},#{houseId},"",#{description})
     </insert>
 
+
     <select id="selectAll" resultType="com.pjy.simplewarehouse.domain.entity.Cargo">
         select  <include refid="ALL_Column"/>
         from cargo

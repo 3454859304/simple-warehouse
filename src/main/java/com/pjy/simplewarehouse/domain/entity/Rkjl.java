@@ -47,88 +47,58 @@ public class Rkjl implements Serializable {
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 
-    /**
-     *
-     */
     public Integer getId() {
         return id;
     }
 
-    /**
-     *
-     */
-    public void setId(Integer id) {
+    public Rkjl setId(Integer id) {
         this.id = id;
+        return this;
     }
 
-    /**
-     *
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     *
-     */
-    public void setName(String name) {
+    public Rkjl setName(String name) {
         this.name = name;
+        return this;
     }
 
-    /**
-     *
-     */
     public Date getTime() {
         return time;
     }
 
-    /**
-     *
-     */
-    public void setTime(Date time) {
+    public Rkjl setTime(Date time) {
         this.time = time;
+        return this;
     }
 
-    /**
-     *
-     */
     public Integer getNum() {
         return num;
     }
 
-    /**
-     *
-     */
-    public void setNum(Integer num) {
+    public Rkjl setNum(Integer num) {
         this.num = num;
+        return this;
     }
 
-    /**
-     *
-     */
     public Integer getHouseid() {
         return houseid;
     }
 
-    /**
-     *
-     */
-    public void setHouseid(Integer houseid) {
+    public Rkjl setHouseid(Integer houseid) {
         this.houseid = houseid;
+        return this;
     }
 
-    /**
-     *
-     */
     public Integer getGroupId() {
         return groupId;
     }
 
-    /**
-     *
-     */
-    public void setGroupId(Integer groupId) {
+    public Rkjl setGroupId(Integer groupId) {
         this.groupId = groupId;
+        return this;
     }
 
     @Override

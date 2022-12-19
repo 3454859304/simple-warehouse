@@ -27,6 +27,7 @@ public interface CargoMapper extends BaseMapper<Cargo> {
     List<Cargo> search(CargoSearchDTO dto);
 
     int add(CargoAddDTO dto);
+
 }
 
 

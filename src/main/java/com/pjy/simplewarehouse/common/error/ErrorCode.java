@@ -16,9 +16,7 @@ public enum ErrorCode {
     CG_ERROR("A0300", "采购异常"),
     RK_ERROR("A0400","入库异常"),
     CK_ERROR("A0500","出库异常"),
-
-    ;
-
+    CK_NOT_ENOUGH("A0501", "货物不足");
 
 
     public String code;

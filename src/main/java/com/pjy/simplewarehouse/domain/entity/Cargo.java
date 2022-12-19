@@ -56,116 +56,76 @@ public class Cargo implements Serializable {
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 
-    /**
-     *
-     */
     public Object getId() {
         return id;
     }
 
-    /**
-     *
-     */
-    public void setId(Object id) {
+    public Cargo setId(Object id) {
         this.id = id;
+        return this;
     }
 
-    /**
-     *
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     *
-     */
-    public void setName(String name) {
+    public Cargo setName(String name) {
         this.name = name;
+        return this;
     }
 
-    /**
-     *
-     */
     public String getManufacture() {
         return manufacture;
     }
 
-    /**
-     *
-     */
-    public void setManufacture(String manufacture) {
+    public Cargo setManufacture(String manufacture) {
         this.manufacture = manufacture;
+        return this;
     }
 
-    /**
-     *
-     */
     public Integer getNumber() {
         return number;
     }
 
-    /**
-     *
-     */
-    public void setNumber(Integer number) {
+    public Cargo setNumber(Integer number) {
         this.number = number;
+        return this;
     }
 
-    /**
-     *
-     */
     public String getCategory() {
         return category;
     }
 
-    /**
-     *
-     */
-    public void setCategory(String category) {
+    public Cargo setCategory(String category) {
         this.category = category;
+        return this;
     }
 
-    /**
-     *
-     */
     public Integer getHouseId() {
         return houseId;
     }
 
-    /**
-     *
-     */
-    public void setHouseId(Integer houseId) {
+    public Cargo setHouseId(Integer houseId) {
         this.houseId = houseId;
+        return this;
     }
 
-    /**
-     *
-     */
     public String getPicture() {
         return picture;
     }
 
-    /**
-     *
-     */
-    public void setPicture(String picture) {
+    public Cargo setPicture(String picture) {
         this.picture = picture;
+        return this;
     }
 
-    /**
-     *
-     */
     public String getDescription() {
         return description;
     }
 
-    /**
-     *
-     */
-    public void setDescription(String description) {
+    public Cargo setDescription(String description) {
         this.description = description;
+        return this;
     }
 
     @Override
