@@ -34,9 +34,10 @@ public class CargoServiceImpl extends ServiceImpl<CargoMapper, Cargo>
 
     @Override
     public R search(CargoSearchDTO dto) {
-        dto.setOffset((dto.getPageNum()-1)*dto.getPageSize());
+        PageHelper.startPage(dto.getPageNum(),dto.getPageSize());
         List<Cargo> cargos= this.baseMapper.search(dto);
-        return R.ok().put(cargos);
+        PageInfo pageInfo = new PageInfo(cargos);
+        return R.ok().put(pageInfo);
     }
 
     @Override

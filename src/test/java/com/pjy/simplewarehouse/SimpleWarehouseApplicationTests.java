@@ -9,7 +9,4 @@ import javax.annotation.Resource;
 @SpringBootTest
 class SimpleWarehouseApplicationTests {
 
-
-
-
 }

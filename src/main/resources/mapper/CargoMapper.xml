@@ -50,16 +50,16 @@
         select <include refid="ALL_Column"/>
         from cargo
         <where>
-            <if test="name!=null">
+            <if test="name!=null and name!=''">
                 AND cargo.name=#{name}
             </if>
-            <if test="houseId!=null">
+            <if test="houseId!=null and houseId!=''">
                 AND cargo.house_id=#{houseId}
             </if>
-            <if test="category!=null">
+            <if test="category!=null and category!=''">
                 AND cargo.category=#{category}
             </if>
-            <if test="manufacture!=null">
+            <if test="manufacture!=null and manufacture!=''">
                 AND cargo.manufacture=#{manufacture}
             </if>
             <if test="numberMin!=null">

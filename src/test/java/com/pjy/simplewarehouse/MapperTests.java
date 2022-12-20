@@ -19,7 +19,7 @@ import java.util.List;
  */
 @SpringBootTest
 public class MapperTests {
-    Logger log = LoggerFactory.getLogger(MapperTests.class);
+    /*Logger log = LoggerFactory.getLogger(MapperTests.class);
 
     @Resource
     UserMapper userMapper;
@@ -59,5 +59,5 @@ public class MapperTests {
     void rkjlTest(){
         List<Rkjl> rkjls = rkjlMapper.selectList(null);
         log.info(String.valueOf(rkjls));
-    }
+    }*/
 }
